@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="">
+    <link rel="apple-touch-icon" href="">
+    <link rel="stylesheet" href="style.css">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="og-image.png">
+
+    <title>CryptoPlanets</title>
+  </head>
+  <body>
+    <main>
+      <div id="warning" class="hidden">
+        You're not connected to the rinkeby test network.
+      </div>
+      <h1>CryptoPlanets</h1>
+      <p>Explore the universe of cute crypto planets. <a id="collection-link">View collection</a></p>
+      <button id="connect-btn">
+          Connect to Wallet
+      </button>
+      <button id="mint-btn" class="hidden">
+          Mint
+      </button>
+      <p class="hidden" id="minting-msg">Minting...</p>
+      <p class="hidden" id="success-msg"></p>
+    </main>
+    <script src="./ethers.umd.js"></script>
+    <script src="./app.js"></script>
+    <script>
+      (async () => {
+        await runApp()
+      })().catch(e => {
+        console.log("ERROR: ", e);
+      });
+    </script>
+  </body>
+</html>

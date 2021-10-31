@@ -1,0 +1,15 @@
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+#warning {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    background: red;
+}
