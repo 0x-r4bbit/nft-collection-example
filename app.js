@@ -31,7 +31,7 @@ const runApp = async () => {
     const provider = new ethers.providers.Web3Provider(ethereum);
     const signer = provider.getSigner();
 
-    let response = await fetch("/artifacts/contracts/CryptoPlanet.sol/CryptoPlanet.json");
+    let response = await fetch("./artifacts/contracts/CryptoPlanet.sol/CryptoPlanet.json");
     let data = await response.json();
     let ABI = data.abi;
 
